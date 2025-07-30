@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local AI Chat</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/github-dark.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Settings</h2>
+            <div class="setting">
+                <label for="system-prompt">System Instruction</label>
+                <textarea id="system-prompt" rows="4" placeholder="e.g., You are a helpful assistant."></textarea>
+            </div>
+            <div class="setting">
+                <label for="model-select">Model</label>
+                <select id="model-select"></select>
+            </div>
+            <div class="setting">
+                <label for="theme-toggle">Theme</label>
+                <button id="theme-toggle">Toggle Dark Mode</button>
+            </div>
+            <div class="setting">
+                <label for="clear-history">History</label>
+                <button id="clear-history">Clear History</button>
+            </div>
+        </div>
+        <div class="chat-container">
+            <div id="chat-box"></div>
+            <div id="input-container">
+                <form id="chat-form">
+                    <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off">
+                    <button type="submit">Send</button>
+                </form>
+                <button id="stop-generating" style="display: none;">Stop Generating</button>
+            </div>
+        </div>
+    </div>
+    <script src="/static/marked.min.js"></script>
+    <script src="/static/highlight.min.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>
